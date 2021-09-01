@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="main.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>MLVT - KNN</title>
+</head>
+
+<body>
+
+
+    <div class="container-fluid px-6">
+        <!-- Navbar -->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-2" id="navbarNavDropdown">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="linReg.html">Linear Regression</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="knn.html"><strong>KNN</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar ends-->
+        <div class="px-4 mt-2 text-center">
+
+            <h1 class="display-5 fw-bold"><b>K-nearest neighbors</b></h1>
+            <div class="col-lg-10 mx-auto">
+                <p class="lead mb-4">Click on the canvas to create new data points and see its class according to
+                    KNN algorithm</p>
+                <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 mx-3">Primary button</button>
+              </div>
+            </div> -->
+            </div>
+
+            <div id="knn" style="border-style: solid; border-color: black; border-width: 2px;"></div>
+            <div class="mt-3 row d-flex justify-content-center" id="interface"></div>
+        </div>
+        <hr>
+        <div class="col-lg-10 mx-auto description">
+            <ul class="list-group">
+                <li class="list-group-item my-2">
+                    <p>
+                        This visualization tool shows how the <strong>KNN</strong> algorithm
+                        <strong>classifies</strong> a data point.
+                        <br><br>
+                        When you add a new data point:
+                    <ol>
+                        <li>The algorithm checks the distance of this new point from all the other points.
+                        </li>
+                        <li>The distance from the sample and the class of the sample are added to an ordered
+                            collection.
+                        </li>
+                        <li> The ordered collection of distances and classes are sorted in ascending
+                            order of the distances.
+                        </li>
+                        <li>The mode of first K labels becomes class of the the new data point.</li>
+
+                    </ol>
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- D3ML library -->
+    <script src="https://rawgit.com/StefanieStoppel/d3ML/master/lib/d3ml.min.js"></script>
+    <script src="libraries/d3ml.js"></script>
+</body>
+
+</html>
